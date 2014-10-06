@@ -13,7 +13,7 @@ CREATE TABLE movies (
   id serial PRIMARY KEY,
   name varchar(50) NOT NULL,
   release_date date NOT NULL,
-  director_id int8 references directors(id)
+  director_id integer references directors(id)
 );
 
 CREATE TABLE actors (
@@ -24,6 +24,6 @@ CREATE TABLE actors (
 
 CREATE TABLE actors_movies (
   id serial PRIMARY KEY,
-  actor_id int8 references actors(id),
-  movie_id int8 references movies(id)
+  actor_id integer references actors(id),
+  movie_id integer references movies(id)
 );
